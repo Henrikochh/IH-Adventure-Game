@@ -2,7 +2,7 @@
 
 # Items
 
-## Vererbung
+Vererbung
 
   Items - Atack
     |
