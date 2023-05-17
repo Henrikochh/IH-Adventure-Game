@@ -1,0 +1,13 @@
+Server Room: A large room where the main servers of the system are located. 
+
+Armory: Here you can find weapons and ammunition that the player can collect. However, the armory is heavily guarded and the player must fight through enemy fire to reach it.
+
+Test Lab: This room contains experimental robots or weapons that the player must sabotage or destroy to weaken the system.
+
+Infirmary: Here the player can find medical equipment or hide to restore his health. 
+
+Warehouse: There are many supplies stored in the warehouse, including potentially important items like key cards or energizers. However, the player must be careful here, as there are also armed guards and security robots in the hall.
+
+Research Department: In the research department, there may be important documents or prototypes that the player must find and steal in order to sabotage the system.
+
+Control Center: This is the most important room in the base and all important decisions of the system are made here. The player could possibly influence a decision here or disable an important security system to clear the way.
