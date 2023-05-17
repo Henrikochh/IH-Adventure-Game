@@ -1,11 +1,7 @@
 package ch.noseryoung.blj.room;
 
-import ch.noseryoung.blj.Item;
-
-import java.util.ArrayList;
-
-public class Lagerhalle extends Room {
-    Lagerhalle(){
+public class ControlCenter extends Room {
+    public ControlCenter(){
         super("Lagerhalle",4, new String[]{"This is a storage Room. Go search for some items"});
     }
 }

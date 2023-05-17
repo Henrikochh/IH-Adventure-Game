@@ -26,7 +26,7 @@ public class Map {
         Levels.add(level2);
         Levels.add(level3);
 
-        ArrayList<Room> rooms = new ArrayList(new StarterRoom(),new Lagerhalle);
+        ArrayList<Room> rooms = new ArrayList(new StarterRoom,new Lagerhalle);
 
     }
     public void enterLevel(int newLevel){

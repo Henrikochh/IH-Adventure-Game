@@ -10,9 +10,8 @@ public class Room {
     int roomNum;
     String[] dialogues = new String[10];
 
-    public Room(String name, ArrayList<Item> items, int roomNum, String[] dialogues){
+    public Room(String name, int roomNum, String[] dialogues){
         this.name = name;
-        this.items = items;
         this.roomNum = roomNum;
         this.dialogues = dialogues;
     }
