@@ -24,9 +24,9 @@ public class Level {
     public void setupLevel(){
 
         int counter = 1;
-        for (int i = 0; i < y; i++) {
-            for (int j = 0; j <x; j++) {
-                level[x][y] = counter;
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j <y; j++) {
+                level[i][j] = counter;
                 counter += 1;
             }
         }
