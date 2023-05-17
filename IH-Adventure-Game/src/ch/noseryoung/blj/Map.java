@@ -1,35 +1,39 @@
 package ch.noseryoung.blj;
 
-public class Map {
-    private int[][] level1 = new int[1][1];
-    private int[][] level2 = new int[1][1];
-    private int[][] level3 = new int[2][0];
+import ch.noseryoung.blj.room.Lagerhalle;
+import ch.noseryoung.blj.room.Room;
+import ch.noseryoung.blj.room.StarterRoom;
 
+import java.util.ArrayList;
+
+public class Map {
+
+    Level level1;
+    Level level2;
+    Level level3;
+    ArrayList<Level> Levels = new ArrayList<>();
     public void setupMap(){
 
-        int counter = 0;
+        level1 = new Level(1,1);
+        level2 = new Level(1,1);
+        level3 = new Level(2,0);
 
-        for (int i = 0; i < 2; i++){
-            for (int j = 0; j < 2; j++) {
-                counter++;
-                level1[i][j] = counter;
-                System.out.println(counter);
-            }
-        }
-        for (int i = 0; i < 2; i++){
-            for (int j = 0; j < 2; j++) {
-                counter++;
-                level2[i][j] = counter;
-                System.out.println(counter);
-            }
-        }
-        for (int i = 0; i < 1; i++){
-            for (int j = 0; j < 3; j++) {
-                counter++;
-                level3[i][j] = counter;
-                System.out.println(counter);
-            }
-        }
+        level1.setupLevel();
+        level2.setupLevel();
+        level3.setupLevel();
+
+        Levels.add(level1);
+        Levels.add(level2);
+        Levels.add(level3);
+
+        ArrayList<Room> rooms = new ArrayList(new StarterRoom(),new Lagerhalle);
+
+    }
+    public void enterLevel(int newLevel){
+        Level currentLevel = Levels.get(newLevel);
+        String enterMessage = currentLevel.getEnterMessage();
+
+        System.out.println(enterMessage);
     }
     public String validateNewPos(int[] newPos, int level){
         int x = newPos[0];
@@ -40,33 +44,22 @@ public class Map {
                 if (x == 1 && y == 0){
                     return "new level";
                 }
-                int x = level1[newPos[1]][newPos[2]];
+                int tets = level1.getLevel()[newPos[1]][newPos[2]];
             } else if (level == 2) {
                 if (x == 0 && y == 1){
                     return "new level";
                 }
-                int x = level1[newPos[1]][newPos[2]];
+                int test = level1.getLevel()[newPos[1]][newPos[2]];
             } else if (level == 3) {
                 if (x == 0 && y == 0){
                     return "new level";
                 }
-                int x = level1[newPos[1]][newPos[2]];
+                int test = level1.getLevel()[newPos[1]][newPos[2]];
             }
-            return true;
+            return "allowed";
         }catch (ArrayIndexOutOfBoundsException e){
-            return ;
+            return "no Room";
         }
     }
 
-    public int[][] getLevel1() {
-        return level1;
-    }
-
-    public int[][] getLevel2() {
-        return level2;
-    }
-
-    public int[][] getLevel3() {
-        return level3;
-    }
 }
