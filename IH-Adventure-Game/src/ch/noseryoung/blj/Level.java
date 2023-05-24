@@ -23,7 +23,7 @@ public class Level {
 
     public void setupLevel(){
 
-        int counter = 1;
+        int counter = 0;
         for (int i = 0; i < x; i++) {
             for (int j = 0; j <y; j++) {
                 level[i][j] = counter;
