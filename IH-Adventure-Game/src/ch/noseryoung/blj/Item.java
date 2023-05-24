@@ -3,20 +3,18 @@ package ch.noseryoung.blj;
 public class Item {
 
         private String name;
-        private int value;
 
-        public Item(String name, int value) {
+
+        public Item(String name) {
             this.name = name;
-            this.value = value;
+
         }
 
         public String getName() {
             return name;
         }
 
-        public int getValue() {
-            return value;
-        }
+
     }
 
 
