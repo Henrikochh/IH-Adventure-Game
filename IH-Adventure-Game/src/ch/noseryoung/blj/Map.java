@@ -61,21 +61,21 @@ public class Map {
             if (x == 2 && y == 0) {
                 return "new level";
             }
-            if (x == level1.getX() || y == level1.getY()){
+            if (x == level1.getX() || y == level1.getY() || x < 0 || y < 0){
                 return "no Room";
             }
         } else if (level == 1) {
             if (x == 0 && y == 2) {
                 return "new level";
             }
-            if (x > level2.getX() || y > level2.getY()){
+            if (x > level2.getX() || y > level2.getY() || x < 0 || y < 0){
                 return "no Room";
             }
         } else if (level == 2) {
             if (x == -1 && y == 0) {
                 return "new level";
             }
-            if (x > level3.getX() || y > level3.getY()){
+            if (x > level3.getX() || y > level3.getY() || x < 0 || y < 0){
                 return "no Room";
             }
         }
