@@ -1,16 +1,14 @@
 package ch.noseryoung.blj.items;
 
-import ch.noseryoung.blj.Item;
-
-import java.security.SecurityPermission;
-
 public class Key extends Item {
 
     private int securityLevel;
+    private String name;
 
-    public Key(int securityLevel) {
+    public Key(int securityLevel, String name) {
         super("Key");
         this.securityLevel = securityLevel;
+        this.name = name;
     }
 
     public int getSecurityLevel() {
@@ -19,5 +17,14 @@ public class Key extends Item {
 
     public void setSecurityLevel(int securityLevel) {
         this.securityLevel = securityLevel;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
